@@ -1,0 +1,2460 @@
+/* Universo Gamer Style - ITVentas Gaming Theme */
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gamer-dark: #0a0a0a;
+    --gamer-darker: #000000;
+    --gamer-red: #ff0040;
+    --gamer-red-dark: #cc0033;
+    --gamer-blue: #00aaff;
+    --gamer-blue-dark: #0088cc;
+    --gamer-gray: #1a1a1a;
+    --gamer-light-gray: #2a2a2a;
+    --gamer-text: #ffffff;
+    --gamer-text-secondary: #cccccc;
+    --gamer-accent: #00ff88;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--gamer-dark);
+    color: var(--gamer-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    background: var(--gamer-dark);
+    min-height: 100vh;
+}
+
+/* Header Gaming */
+header {
+    background: linear-gradient(135deg, var(--gamer-darker) 0%, var(--gamer-gray) 100%);
+    padding: 0;
+    box-shadow: 0 4px 20px rgba(255, 0, 64, 0.3);
+    position: relative;
+    border-bottom: 3px solid var(--gamer-red);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-content .nav-menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--gamer-red), var(--gamer-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(255, 0, 64, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gamer-red), var(--gamer-blue));
+    border-radius: 2px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 5px var(--gamer-red); }
+    to { box-shadow: 0 0 20px var(--gamer-red), 0 0 30px var(--gamer-blue); }
+}
+
+/* Navegación Gaming */
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-item {
+    color: var(--gamer-text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.nav-item:hover {
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-red-dark));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 64, 0.4);
+}
+
+.nav-item.active {
+    background: linear-gradient(135deg, var(--gamer-blue), var(--gamer-blue-dark));
+    color: white;
+}
+
+/* Barra de búsqueda Gaming */
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+    max-width: 400px;
+    min-width: 250px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--gamer-light-gray);
+    border-radius: 30px;
+    font-size: 1rem;
+    background: var(--gamer-gray);
+    color: var(--gamer-text);
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--gamer-red);
+    box-shadow: 0 0 20px rgba(255, 0, 64, 0.3), inset 0 2px 10px rgba(0, 0, 0, 0.3);
+    background: var(--gamer-light-gray);
+}
+
+.search-input::placeholder {
+    color: var(--gamer-text-secondary);
+}
+
+/* Botones Gaming */
+.btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-red-dark));
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, var(--gamer-red-dark), var(--gamer-red));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 0, 64, 0.4);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--gamer-blue), var(--gamer-blue-dark)) !important;
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3) !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--gamer-blue-dark), var(--gamer-blue)) !important;
+    box-shadow: 0 10px 25px rgba(0, 170, 255, 0.4) !important;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--gamer-accent), #00cc66) !important;
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3) !important;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #00cc66, var(--gamer-accent)) !important;
+    box-shadow: 0 10px 25px rgba(0, 255, 136, 0.4) !important;
+}
+
+
+/* Filtros Gaming */
+.filters {
+    background: var(--gamer-gray);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--gamer-light-gray);
+}
+
+.filters h3 {
+    margin-bottom: 1.5rem;
+    color: var(--gamer-text);
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-select {
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--gamer-light-gray);
+    border-radius: 25px;
+    background: var(--gamer-dark);
+    color: var(--gamer-text);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    font-weight: 600;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--gamer-red);
+    box-shadow: 0 0 15px rgba(255, 0, 64, 0.3);
+}
+
+.filter-select:hover {
+    border-color: var(--gamer-blue);
+    background: var(--gamer-light-gray);
+}
+
+/* Grid de productos Gaming */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 0 2rem;
+    align-items: stretch;
+}
+
+/* Tarjetas de producto Gaming */
+.product-card {
+    background: linear-gradient(135deg, var(--gamer-gray) 0%, var(--gamer-light-gray) 100%);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 64, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.product-card:hover::before {
+    left: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 0, 64, 0.3);
+    border-color: var(--gamer-red);
+}
+
+.product-image {
+    text-align: center;
+    font-size: 4rem;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, var(--gamer-dark), var(--gamer-gray));
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--gamer-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+/* Fallback para cuando no hay imagen */
+.product-image:not(:has(img)) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image:not(:has(img))::before {
+    content: "🖥️";
+    font-size: 4rem;
+    opacity: 0.7;
+}
+
+/* Mejoras adicionales para imágenes */
+.product-image img[src=""],
+.product-image img:not([src]) {
+    display: none;
+}
+
+.product-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 0, 64, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.product-card:hover .product-image::after {
+    transform: translateX(100%);
+}
+
+.product-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.product-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gamer-text);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-description {
+    color: var(--gamer-text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+    min-height: 4.5rem;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--gamer-accent);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    flex-shrink: 0;
+}
+
+.product-stock {
+    color: var(--gamer-text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.product-stock.low-stock {
+    color: var(--gamer-red) !important;
+    font-weight: 700 !important;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* Botón agregar al carrito Gaming */
+.add-to-cart {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-red-dark));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.add-to-cart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.add-to-cart:hover::before {
+    left: 100%;
+}
+
+.add-to-cart:hover {
+    background: linear-gradient(135deg, var(--gamer-red-dark), var(--gamer-red));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 0, 64, 0.4);
+}
+
+.add-to-cart.disabled {
+    background: linear-gradient(135deg, #444, #333) !important;
+    color: #888 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+
+/* Paginación Gaming */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+
+.page-btn {
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, var(--gamer-gray), var(--gamer-light-gray));
+    color: var(--gamer-text);
+    border: 2px solid var(--gamer-light-gray);
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    min-width: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.page-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.page-btn:hover::before {
+    left: 100%;
+}
+
+.page-btn:hover {
+    background: linear-gradient(135deg, var(--gamer-light-gray), var(--gamer-gray));
+    border-color: var(--gamer-red);
+    color: var(--gamer-text);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 0, 64, 0.3);
+}
+
+.page-btn.active {
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-red-dark));
+    color: white;
+    border-color: var(--gamer-red);
+    box-shadow: 0 8px 25px rgba(255, 0, 64, 0.4);
+    transform: translateY(-2px);
+}
+
+.page-btn.active:hover {
+    background: linear-gradient(135deg, var(--gamer-red-dark), var(--gamer-red));
+    box-shadow: 0 10px 30px rgba(255, 0, 64, 0.5);
+}
+
+.page-dots {
+    padding: 0 1rem;
+    color: var(--gamer-text-secondary);
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* Carrito flotante Gaming */
+.cart-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-red-dark));
+    color: white;
+    padding: 1.2rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(255, 0, 64, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--gamer-red);
+}
+
+.cart-icon:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 0, 64, 0.5);
+}
+
+.cart-count {
+    background: var(--gamer-accent);
+    color: var(--gamer-dark);
+    font-size: 0.9rem;
+    font-weight: 900;
+    padding: 0.3rem 0.6rem;
+    border-radius: 50%;
+    min-width: 25px;
+    text-align: center;
+    animation: bounceIn 0.5s ease;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* Footer Gaming */
+footer {
+    background: linear-gradient(135deg, var(--gamer-darker) 0%, var(--gamer-gray) 100%);
+    padding: 3rem 2rem 2rem;
+    margin-top: 4rem;
+    border-top: 3px solid var(--gamer-red);
+    box-shadow: 0 -5px 20px rgba(255, 0, 64, 0.2);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--gamer-text);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p, .footer-section a {
+    color: var(--gamer-text-secondary);
+    text-decoration: none;
+    line-height: 1.8;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--gamer-red);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gamer-light-gray);
+    color: var(--gamer-text-secondary);
+}
+
+/* Estados y mensajes Gaming */
+.loading {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.3rem;
+    color: var(--gamer-text-secondary);
+    background: var(--gamer-gray);
+    border-radius: 15px;
+    margin: 2rem 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--gamer-light-gray);
+}
+
+.error-message, .success-message {
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+}
+
+.error-message {
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-red-dark));
+    color: white;
+    border: 3px solid var(--gamer-red);
+    box-shadow: 0 10px 40px rgba(255, 0, 64, 0.5);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    min-width: 400px;
+    max-width: 90%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    animation: slideDown 0.5s ease;
+}
+
+.success-message {
+    background: linear-gradient(135deg, var(--gamer-accent), #00cc66);
+    color: var(--gamer-dark);
+    border: 3px solid var(--gamer-accent);
+    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.5);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    min-width: 400px;
+    max-width: 90%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateX(-50%) translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.no-products {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--gamer-text-secondary);
+    grid-column: 1 / -1;
+    background: var(--gamer-gray);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--gamer-light-gray);
+}
+
+.no-products h3 {
+    margin-bottom: 1rem;
+    color: var(--gamer-text);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design Gaming */
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .header-content .nav-menu {
+        order: 2;
+        margin: 1rem 0;
+    }
+    
+    .search-bar {
+        order: 3;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-select {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .product-card {
+        padding: 1.2rem;
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .product-name {
+        min-height: 2.4rem;
+        font-size: 1.2rem;
+    }
+    
+    .product-description {
+        min-height: 3.6rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .product-image {
+        font-size: 3rem;
+        padding: 1.5rem;
+        min-height: 150px;
+    }
+    
+    .product-image img {
+        max-height: 120px;
+    }
+    
+    
+    .pagination {
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+    
+    .page-btn {
+        padding: 0.8rem 1.2rem;
+        min-width: 45px;
+        font-size: 0.8rem;
+    }
+    
+    .cart-icon {
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        min-height: 350px;
+        padding: 1rem;
+    }
+    
+    .product-name {
+        min-height: 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .product-description {
+        min-height: 3rem;
+        -webkit-line-clamp: 2;
+        font-size: 0.9rem;
+    }
+    
+    .product-image {
+        font-size: 2.5rem;
+        padding: 1rem;
+        min-height: 120px;
+    }
+    
+    .product-image img {
+        max-height: 100px;
+    }
+    
+    
+    .product-price {
+        font-size: 1.6rem;
+    }
+    
+    .pagination {
+        gap: 0.3rem;
+        padding: 0 0.5rem;
+    }
+    
+    .page-btn {
+        padding: 0.6rem 1rem;
+        min-width: 40px;
+        font-size: 0.7rem;
+    }
+    
+    .cart-icon {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animaciones Gaming */
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.product-card {
+    animation: slideInUp 0.8s ease forwards;
+}
+
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+.product-card:nth-child(5) { animation-delay: 0.5s; }
+.product-card:nth-child(6) { animation-delay: 0.6s; }
+.product-card:nth-child(7) { animation-delay: 0.7s; }
+.product-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Scrollbar Gaming */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gamer-gray);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-blue));
+    border-radius: 10px;
+    border: 2px solid var(--gamer-gray);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--gamer-blue), var(--gamer-red));
+}
+
+/* Efectos de partículas (opcional) */
+.gaming-bg::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 80%, rgba(255, 0, 64, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 170, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Modal Overlay Gaming */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Content Gaming */
+.modal-content {
+    background: linear-gradient(135deg, var(--gamer-gray) 0%, var(--gamer-light-gray) 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(255, 0, 64, 0.4),
+                0 0 0 2px var(--gamer-red);
+    animation: slideDown 0.4s ease;
+    border: 3px solid var(--gamer-red);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Botón Cerrar Modal */
+.modal-content .close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--gamer-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--gamer-dark);
+    line-height: 1;
+}
+
+.modal-content .close:hover {
+    color: var(--gamer-red);
+    background: var(--gamer-light-gray);
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 0, 64, 0.5);
+}
+
+/* Título del Modal */
+.modal-content h2 {
+    color: var(--gamer-text);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    background: linear-gradient(45deg, var(--gamer-red), var(--gamer-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Contenedor de Items del Carrito */
+.cart-items {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Item del Carrito Gaming */
+.cart-item {
+    background: var(--gamer-dark);
+    border-radius: 10px;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    border: 2px solid var(--gamer-light-gray);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen del producto en el carrito */
+.cart-item-image {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--gamer-light-gray);
+    background: var(--gamer-gray);
+    transition: all 0.3s ease;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cart-item:hover .cart-item-image {
+    border-color: var(--gamer-red);
+    box-shadow: 0 0 10px rgba(255, 0, 64, 0.3);
+}
+
+.cart-item:hover .cart-item-image img {
+    transform: scale(1.05);
+}
+
+.cart-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 64, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.cart-item:hover::before {
+    left: 100%;
+}
+
+.cart-item:hover {
+    border-color: var(--gamer-red);
+    box-shadow: 0 5px 20px rgba(255, 0, 64, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Información del Item */
+.cart-item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.cart-item-info h4 {
+    color: var(--gamer-text);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+}
+
+.cart-item-price {
+    color: var(--gamer-accent) !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+.cart-item-info p {
+    color: var(--gamer-text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Controles de Cantidad */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.quantity-controls button {
+    background: linear-gradient(135deg, var(--gamer-blue), var(--gamer-blue-dark));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 170, 255, 0.3);
+}
+
+.quantity-controls button:hover {
+    background: linear-gradient(135deg, var(--gamer-blue-dark), var(--gamer-blue));
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.5);
+}
+
+.quantity-controls span,
+.qty-display {
+    color: var(--gamer-text);
+    font-weight: 600;
+    font-size: 0.85rem;
+    min-width: 80px;
+    text-align: center;
+}
+
+.qty-btn {
+    background: linear-gradient(135deg, var(--gamer-blue), var(--gamer-blue-dark));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-weight: 900;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background: linear-gradient(135deg, var(--gamer-blue-dark), var(--gamer-blue));
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.5);
+}
+
+/* Total del Item */
+.cart-item-total {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: flex-end;
+    min-width: 120px;
+}
+
+.subtotal-label {
+    color: var(--gamer-text-secondary) !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+.subtotal-amount {
+    color: var(--gamer-accent) !important;
+    font-size: 1.1rem !important;
+    font-weight: 900 !important;
+    margin: 0 0 0.3rem 0 !important;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.cart-item-total p {
+    color: var(--gamer-accent);
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* Botón Eliminar Item */
+.remove-item {
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-red-dark));
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 10px rgba(255, 0, 64, 0.3);
+}
+
+.remove-item:hover {
+    background: linear-gradient(135deg, var(--gamer-red-dark), var(--gamer-red));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 64, 0.5);
+}
+
+/* Total del Carrito */
+.cart-total {
+    background: var(--gamer-dark);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid var(--gamer-light-gray);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cart-total h3 {
+    color: var(--gamer-accent);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+/* Botones del Carrito */
+.checkout-btn,
+.clear-cart-btn {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.checkout-btn::before,
+.clear-cart-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.checkout-btn:hover::before,
+.clear-cart-btn:hover::before {
+    left: 100%;
+}
+
+.checkout-btn {
+    background: linear-gradient(135deg, var(--gamer-accent), #00cc66);
+    color: var(--gamer-dark);
+    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.3);
+}
+
+.checkout-btn:hover {
+    background: linear-gradient(135deg, #00cc66, var(--gamer-accent));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.5);
+}
+
+.clear-cart-btn {
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-red-dark));
+    color: white;
+    box-shadow: 0 5px 20px rgba(255, 0, 64, 0.3);
+}
+
+.clear-cart-btn:hover {
+    background: linear-gradient(135deg, var(--gamer-red-dark), var(--gamer-red));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 0, 64, 0.5);
+}
+
+/* Modal de Detalle de Producto */
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.product-detail-image {
+    text-align: center;
+    background: var(--gamer-dark);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--gamer-light-gray);
+}
+
+.product-detail-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.product-detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-detail-info h2 {
+    color: var(--gamer-text);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-align: left;
+    background: none;
+    -webkit-text-fill-color: var(--gamer-text);
+}
+
+.product-detail-info .category {
+    color: var(--gamer-blue);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-detail-info .description {
+    color: var(--gamer-text-secondary);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.product-detail-info .price {
+    color: var(--gamer-accent);
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+.product-detail-info .stock {
+    color: var(--gamer-text-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.add-to-cart-large {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-red-dark));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(255, 0, 64, 0.3);
+}
+
+.add-to-cart-large::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.add-to-cart-large:hover::before {
+    left: 100%;
+}
+
+.add-to-cart-large:hover {
+    background: linear-gradient(135deg, var(--gamer-red-dark), var(--gamer-red));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 0, 64, 0.5);
+}
+
+/* Responsive para Modales */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 2rem 1.5rem;
+        max-height: 90vh;
+    }
+    
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .cart-item-total {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .quantity-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .remove-item {
+        width: 100%;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cart-total h3 {
+        font-size: 1.6rem;
+    }
+    
+    .product-detail-info h2 {
+        font-size: 1.5rem;
+    }
+    
+    .product-detail-info .price {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .modal-content .close {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 2rem;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .cart-item {
+        padding: 1rem;
+    }
+    
+    .cart-item-info h4 {
+        font-size: 1.1rem;
+    }
+    
+    .cart-total {
+        padding: 1.5rem;
+    }
+    
+    .quantity-controls span {
+        font-size: 0.9rem;
+        min-width: 100px;
+    }
+}
+
+/* ===========================================
+   SECCIÓN DE PAGO
+   =========================================== */
+
+/* Modal de Pago */
+.pago-modal {
+    max-width: 1000px;
+    width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.pago-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+/* Resumen del Pedido */
+.pago-resumen {
+    background: var(--gamer-gray);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid var(--gamer-light-gray);
+}
+
+.pago-resumen h3 {
+    color: var(--gamer-text);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--gamer-red);
+    padding-bottom: 0.5rem;
+}
+
+.pago-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.pago-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background: var(--gamer-dark);
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    border: 1px solid var(--gamer-light-gray);
+}
+
+.pago-item-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--gamer-light-gray);
+}
+
+.pago-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pago-item-info {
+    flex: 1;
+}
+
+.pago-item-info h4 {
+    color: var(--gamer-text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 0.3rem 0;
+}
+
+.pago-item-info p {
+    color: var(--gamer-text-secondary);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.pago-item-subtotal {
+    color: var(--gamer-accent);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.pago-total {
+    border-top: 2px solid var(--gamer-red);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.pago-total h3 {
+    color: var(--gamer-accent);
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* Formulario de Pago */
+.pago-formulario {
+    background: var(--gamer-gray);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid var(--gamer-light-gray);
+}
+
+/* Campos de dirección en cuadrícula */
+.direccion-campos {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.direccion-campos .form-group:first-child {
+    grid-column: 1 / -1;
+}
+
+.direccion-campos .form-group:nth-child(2) {
+    grid-column: 1;
+}
+
+.direccion-campos .form-group:nth-child(3) {
+    grid-column: 2;
+}
+
+.direccion-campos .form-group:nth-child(4) {
+    grid-column: 1;
+}
+
+.direccion-campos .form-group:nth-child(5) {
+    grid-column: 2;
+}
+
+.pago-formulario h3 {
+    color: var(--gamer-text);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--gamer-blue);
+    padding-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--gamer-text);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--gamer-dark);
+    border: 2px solid var(--gamer-light-gray);
+    border-radius: 8px;
+    color: var(--gamer-text);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gamer-blue);
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
+}
+
+/* Contador de caracteres */
+.char-counter {
+    display: block;
+    color: var(--gamer-text-secondary);
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Input con error */
+.input-error {
+    border-color: var(--gamer-red) !important;
+    box-shadow: 0 0 10px rgba(255, 0, 64, 0.3) !important;
+}
+
+/* Mensaje de error */
+.error-message {
+    display: block;
+    color: #ffffff;
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+    font-weight: 600;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Input válido */
+.form-group input:valid:not(:placeholder-shown),
+.form-group textarea:valid:not(:placeholder-shown) {
+    border-color: var(--gamer-accent);
+}
+
+.form-group input:valid:not(:placeholder-shown):focus,
+.form-group textarea:valid:not(:placeholder-shown):focus {
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* Métodos de Pago */
+.metodos-pago {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.metodo-pago {
+    position: relative;
+}
+
+.metodo-pago input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.metodo-pago label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    background: var(--gamer-dark);
+    border: 2px solid var(--gamer-light-gray);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.metodo-pago label i {
+    font-size: 1.2rem;
+    color: var(--gamer-blue);
+}
+
+.metodo-pago input[type="radio"]:checked + label {
+    border-color: var(--gamer-blue);
+    background: linear-gradient(135deg, var(--gamer-blue), var(--gamer-blue-dark));
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+}
+
+.metodo-pago input[type="radio"]:checked + label i {
+    color: white;
+}
+
+/* Botones de Pago */
+.pago-botones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-cancelar,
+.btn-confirmar {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-cancelar {
+    background: linear-gradient(135deg, var(--gamer-red), var(--gamer-red-dark));
+    color: white;
+}
+
+.btn-cancelar:hover {
+    background: linear-gradient(135deg, var(--gamer-red-dark), var(--gamer-red));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 64, 0.4);
+}
+
+.btn-confirmar {
+    background: linear-gradient(135deg, var(--gamer-accent), #00cc66);
+    color: var(--gamer-dark);
+}
+
+.btn-confirmar:hover {
+    background: linear-gradient(135deg, #00cc66, var(--gamer-accent));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+}
+
+/* Responsive para Pago */
+@media (max-width: 768px) {
+    .pago-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .pago-modal {
+        width: 98%;
+        max-height: 95vh;
+    }
+    
+    .pago-botones {
+        flex-direction: column;
+    }
+    
+    .direccion-campos {
+        grid-template-columns: 1fr;
+    }
+    
+    .direccion-campos .form-group {
+        grid-column: 1;
+    }
+}
+
+/* ============================================
+   ESTILOS PARA MODAL DE PAGO EN EFECTIVO
+   ============================================ */
+.efectivo-container {
+    padding: 1.5rem;
+}
+
+.descuento-info {
+    background: linear-gradient(135deg, var(--gamer-dark), var(--gamer-gray));
+    border: 2px solid var(--gamer-accent);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.descuento-badge {
+    background: linear-gradient(135deg, var(--gamer-accent), #00cc66);
+    color: var(--gamer-dark);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+.descuento-badge i {
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.precio-detalle {
+    padding: 1rem 0;
+}
+
+.precio-detalle p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.precio-original span {
+    color: var(--gamer-text-secondary);
+    text-decoration: line-through;
+}
+
+.precio-descuento span {
+    color: var(--gamer-accent);
+    font-weight: 700;
+}
+
+.precio-final {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--gamer-accent);
+    margin-top: 0.5rem;
+}
+
+.precio-final span {
+    font-size: 2rem;
+}
+
+.entrega-opciones {
+    margin: 2rem 0;
+}
+
+.entrega-opciones h3 {
+    color: var(--gamer-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.entrega-opciones h3 i {
+    margin-right: 0.5rem;
+}
+
+.opciones-entrega {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.opcion-entrega {
+    position: relative;
+}
+
+.opcion-entrega input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.opcion-entrega label {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: var(--gamer-dark);
+    border: 2px solid var(--gamer-light-gray);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.opcion-entrega label i {
+    font-size: 1.5rem;
+    color: var(--gamer-blue);
+    margin-top: 0.2rem;
+}
+
+.opcion-entrega input[type="radio"]:checked + label {
+    border-color: var(--gamer-accent);
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 204, 102, 0.1));
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
+
+.opcion-entrega input[type="radio"]:checked + label i {
+    color: var(--gamer-accent);
+}
+
+.opcion-info strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: var(--gamer-text);
+}
+
+.opcion-info p {
+    color: var(--gamer-text-secondary);
+    font-size: 0.95rem;
+}
+
+.efectivo-botones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* ============================================
+   ESTILOS PARA MODAL DE TRANSFERENCIA
+   ============================================ */
+.transferencia-container {
+    padding: 1.5rem;
+}
+
+.transferencia-info {
+    background: linear-gradient(135deg, var(--gamer-dark), var(--gamer-gray));
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.transferencia-instruccion {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.1rem;
+    color: var(--gamer-blue);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 170, 255, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid var(--gamer-blue);
+}
+
+.transferencia-instruccion i {
+    font-size: 1.5rem;
+}
+
+.datos-bancarios {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dato-bancario {
+    background: var(--gamer-dark);
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 2px solid var(--gamer-light-gray);
+    transition: all 0.3s ease;
+}
+
+.dato-bancario:hover {
+    border-color: var(--gamer-blue);
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
+}
+
+.dato-bancario.total {
+    background: linear-gradient(135deg, var(--gamer-blue), var(--gamer-blue-dark));
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3);
+}
+
+.dato-bancario.total label,
+.dato-bancario.total .dato-valor strong {
+    color: white;
+}
+
+.dato-bancario label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gamer-text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.dato-bancario label i {
+    color: var(--gamer-blue);
+}
+
+.dato-valor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dato-valor strong {
+    font-size: 1.3rem;
+    color: var(--gamer-text);
+    letter-spacing: 1px;
+}
+
+.monto-transferir {
+    font-size: 2rem !important;
+    color: white !important;
+}
+
+.btn-copiar {
+    background: linear-gradient(135deg, var(--gamer-accent), #00cc66);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: var(--gamer-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-copiar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 255, 136, 0.3);
+}
+
+.btn-copiar i {
+    font-size: 1rem;
+}
+
+.transferencia-mensaje {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.2rem;
+    background: rgba(255, 0, 64, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid var(--gamer-red);
+}
+
+.transferencia-mensaje i {
+    font-size: 1.5rem;
+    color: var(--gamer-red);
+    margin-top: 0.2rem;
+}
+
+.transferencia-mensaje p {
+    color: var(--gamer-text-secondary);
+    line-height: 1.6;
+}
+
+.transferencia-mensaje strong {
+    color: var(--gamer-text);
+}
+
+.transferencia-botones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* ============================================
+   ESTILOS PARA MODAL DE TARJETA
+   ============================================ */
+.tarjeta-container {
+    padding: 1.5rem;
+}
+
+.tarjeta-visual {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    perspective: 1000px;
+}
+
+.tarjeta-flip-container {
+    width: 350px;
+    height: 220px;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.tarjeta-flip-container.flip {
+    transform: rotateY(180deg);
+}
+
+.tarjeta-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 170, 255, 0.4);
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.tarjeta-frente {
+    background: linear-gradient(135deg, var(--gamer-blue), var(--gamer-blue-dark), #003366);
+}
+
+.tarjeta-reverso {
+    background: linear-gradient(135deg, #003366, var(--gamer-blue-dark), var(--gamer-blue));
+    transform: rotateY(180deg);
+}
+
+.tarjeta-chip {
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta-chip::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.1) 2px,
+        rgba(0, 0, 0, 0.1) 4px
+    );
+}
+
+.tarjeta-numero {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tarjeta-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.tarjeta-titular,
+.tarjeta-expira {
+    text-align: left;
+}
+
+.tarjeta-titular small,
+.tarjeta-expira small {
+    display: block;
+    font-size: 0.7rem;
+    opacity: 0.8;
+    margin-bottom: 0.3rem;
+}
+
+.tarjeta-titular div,
+.tarjeta-expira div {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Estilos del reverso de la tarjeta */
+.tarjeta-banda {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(135deg, #1a1a1a, #000000);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta-cvv-box {
+    position: absolute;
+    top: 100px;
+    right: 2rem;
+    background: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    min-width: 80px;
+}
+
+.tarjeta-cvv-label {
+    font-size: 0.7rem;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+}
+
+.tarjeta-cvv-display {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+#formularioTarjeta {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#formularioTarjeta .form-group {
+    margin-bottom: 1.2rem;
+}
+
+#formularioTarjeta label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--gamer-blue);
+    font-weight: 600;
+}
+
+#formularioTarjeta label i {
+    margin-right: 0.5rem;
+}
+
+#formularioTarjeta input,
+#formularioTarjeta select {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--gamer-dark);
+    border: 2px solid var(--gamer-light-gray);
+    border-radius: 10px;
+    color: var(--gamer-text);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#formularioTarjeta input:focus,
+#formularioTarjeta select:focus {
+    outline: none;
+    border-color: var(--gamer-blue);
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
+}
+
+.tarjeta-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.tarjeta-total {
+    background: linear-gradient(135deg, var(--gamer-dark), var(--gamer-gray));
+    padding: 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 1.5rem 0;
+    border: 2px solid var(--gamer-blue);
+}
+
+.tarjeta-total p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.tarjeta-total strong {
+    color: var(--gamer-blue);
+    font-size: 1.8rem;
+}
+
+.tarjeta-botones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive para modales de pago */
+@media (max-width: 768px) {
+    .efectivo-botones,
+    .transferencia-botones,
+    .tarjeta-botones {
+        flex-direction: column;
+    }
+    
+    .tarjeta-flip-container {
+        width: 100%;
+        max-width: 320px;
+        height: 200px;
+    }
+    
+    .tarjeta-card {
+        padding: 1.5rem;
+    }
+    
+    .tarjeta-numero {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    .tarjeta-chip {
+        width: 40px;
+        height: 32px;
+        margin-bottom: 1rem;
+    }
+    
+    .tarjeta-info {
+        margin-top: 0.5rem;
+    }
+    
+    .tarjeta-titular div,
+    .tarjeta-expira div {
+        font-size: 0.85rem;
+    }
+    
+    .tarjeta-banda {
+        top: 25px;
+        height: 40px;
+    }
+    
+    .tarjeta-cvv-box {
+        top: 85px;
+        right: 1.5rem;
+        padding: 0.6rem 1rem;
+        min-width: 60px;
+    }
+    
+    .tarjeta-cvv-display {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    
+    .tarjeta-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .opciones-entrega {
+        gap: 0.8rem;
+    }
+    
+    .opcion-entrega label {
+        padding: 1rem;
+    }
+    
+    .dato-valor {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

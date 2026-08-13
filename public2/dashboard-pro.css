@@ -1,0 +1,1136 @@
+/* Dashboard Profesional - Estilo Limpio y Elegante */
+/* Inspirado en el diseño minimalista del login */
+
+:root {
+    /* Colores gaming con rojos - Modo Claro */
+    --admin-dark: #f8f9fa;           /* Fondo claro principal */
+    --admin-darker: #ffffff;         /* Fondo blanco */
+    --admin-primary: #ff0040;        /* Rojo gaming principal */
+    --admin-primary-dark: #cc0033;   /* Rojo gaming más oscuro */
+    --admin-secondary: #00d4ff;      /* Cyan gaming */
+    --admin-secondary-dark: #00a8cc; /* Cyan gaming oscuro */
+    --admin-accent: #00cc6a;         /* Verde gaming ajustado para modo claro */
+    --admin-gray: #ffffff;           /* Blanco para cajas */
+    --admin-light-gray: #f1f3f5;     /* Gris muy claro */
+    --admin-lighter-gray: #e9ecef;   /* Gris claro */
+    --admin-text: #212529;           /* Texto oscuro */
+    --admin-text-secondary: #495057; /* Texto secundario oscuro */
+    --admin-border: #dee2e6;         /* Borde claro */
+    --admin-success: #00cc6a;        /* Verde gaming */
+    --admin-warning: #ffaa00;        /* Amarillo gaming */
+    --admin-danger: #ff0040;         /* Rojo gaming */
+    --admin-info: #00d4ff;           /* Cyan gaming */
+    
+    /* Colores gaming adicionales */
+    --gamer-red: #ff0040;
+    --gamer-blue: #00d4ff;
+    --gamer-green: #00cc6a;
+    --gamer-purple: #8b5cf6;
+    --gamer-orange: #ff6b35;
+}
+
+/* Override de AdminLTE - Skin limpia y elegante */
+.skin-blue-light .main-header {
+    background: var(--admin-darker) !important;
+    border-bottom: 2px solid var(--admin-primary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skin-blue-light .main-header .logo {
+    background: linear-gradient(135deg, var(--admin-primary), var(--admin-primary-dark)) !important;
+    color: white !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-right: 1px solid var(--admin-primary-dark);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(255, 0, 64, 0.2);
+    font-size: 1.2rem;
+}
+
+.skin-blue-light .main-header .logo:hover {
+    background: linear-gradient(135deg, var(--admin-primary-dark), var(--admin-primary)) !important;
+    box-shadow: 0 2px 15px rgba(255, 0, 64, 0.3);
+}
+
+.skin-blue-light .main-header .navbar {
+    background: transparent !important;
+}
+
+/* Sidebar limpio */
+.skin-blue-light .main-sidebar {
+    background: var(--admin-darker) !important;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid var(--admin-border);
+}
+
+.skin-blue-light .sidebar-menu > li > a {
+    color: var(--admin-text-secondary) !important;
+    border-left: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 18px 25px;
+    font-size: 1.3rem;
+}
+
+.skin-blue-light .sidebar-menu > li:hover > a,
+.skin-blue-light .sidebar-menu > li.active > a {
+    color: var(--admin-text) !important;
+    background: rgb(255, 255, 255) !important;
+    border-left-color: var(--admin-primary);
+}
+
+.skin-blue-light .sidebar-menu > li.active > a {
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Elementos seleccionados en sidebar - eliminar fondo blanco */
+.sidebar-menu li.active,
+.sidebar-menu li.active > a,
+.sidebar-menu li.active > a:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sub-elementos del menú activo */
+.treeview-menu li.active > a {
+    background: #f8f9fa !important;
+    color: #000000 !important;
+}
+
+/* Iconos de sub-menú */
+.treeview-menu li > a:before {
+    color: var(--admin-text-secondary) !important;
+}
+
+.skin-blue-light .treeview-menu > li > a {
+    color: var(--admin-text-secondary) !important;
+    transition: all 0.3s ease;
+    padding: 15px 25px 15px 45px;
+    font-size: 1.2rem;
+}
+
+.skin-blue-light .treeview-menu > li:hover > a,
+.skin-blue-light .treeview-menu > li.active > a {
+    color: var(--admin-text) !important;
+    background: rgba(255, 240, 240, 0.1) !important;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    background: var(--admin-dark) !important;
+    color: var(--admin-text);
+}
+
+/* Área de contenido principal - Eliminar fondo blanco */
+.content-header,
+.content,
+.main-content {
+    background: var(--admin-dark) !important;
+    color: var(--admin-text) !important;
+}
+
+/* Box de contenido principal */
+.content-box,
+.wrapper {
+    background: var(--admin-dark) !important;
+    color: var(--admin-text) !important;
+}
+
+/* Boxes limpios y elegantes */
+.box {
+    background: var(--admin-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.box:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px);
+}
+
+.box-header {
+    background: var(--admin-light-gray) !important;
+    color: var(--admin-text) !important;
+    border-bottom: 1px solid var(--admin-border) !important;
+    border-radius: 8px 8px 0 0 !important;
+    padding: 15px 20px !important;
+}
+
+.box-title {
+    color: var(--admin-text) !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    margin: 0;
+}
+
+.box-body {
+    background: var(--admin-gray) !important;
+    color: var(--admin-text);
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Small boxes (estadísticas) - Diseño gaming */
+.small-box {
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid transparent !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.small-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+.small-box.bg-aqua {
+    background: linear-gradient(135deg, var(--admin-secondary), var(--admin-secondary-dark)) !important;
+    border-color: var(--admin-secondary) !important;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2) !important;
+}
+
+.small-box.bg-green {
+    background: linear-gradient(135deg, var(--admin-accent), #00cc6a) !important;
+    border-color: var(--admin-accent) !important;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2) !important;
+}
+
+.small-box.bg-yellow {
+    background: linear-gradient(135deg, var(--admin-warning), #e69500) !important;
+    border-color: var(--admin-warning) !important;
+    box-shadow: 0 0 20px rgba(255, 170, 0, 0.2) !important;
+}
+
+.small-box.bg-red {
+    background: linear-gradient(135deg, var(--admin-danger), var(--admin-primary-dark)) !important;
+    border-color: var(--admin-danger) !important;
+    box-shadow: 0 0 20px rgba(255, 0, 64, 0.3) !important;
+}
+
+.small-box .inner h4 {
+    font-weight: 700 !important;
+    color: white !important;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.small-box .inner p {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-size: 1rem;
+}
+
+.small-box .icon {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.small-box:hover .icon {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.small-box-footer {
+    background: rgba(0, 0, 0, 0.1) !important;
+    color: white !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.small-box-footer:hover {
+    background: rgba(0, 0, 0, 0.2) !important;
+    color: white !important;
+}
+
+/* Botones limpios */
+.btn {
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid transparent !important;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+}
+
+/* Botones de exportación personalizados */
+.dt-buttons .btn,
+.buttons-copy,
+.buttons-excel,
+.buttons-csv,
+.buttons-pdf {
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    border: 2px solid transparent !important;
+    padding: 10px 16px !important;
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin: 0 4px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Botón Copy */
+.buttons-copy,
+.dt-buttons .buttons-copy {
+    background: linear-gradient(135deg, #6b7280, #4b5563) !important;
+    color: white !important;
+    border-color: #6b7280 !important;
+}
+
+.buttons-copy:hover,
+.dt-buttons .buttons-copy:hover {
+    background: linear-gradient(135deg, #4b5563, #374151) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(107, 114, 128, 0.4) !important;
+}
+
+/* Botón Excel */
+.buttons-excel,
+.dt-buttons .buttons-excel {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    color: white !important;
+    border-color: #10b981 !important;
+}
+
+.buttons-excel:hover,
+.dt-buttons .buttons-excel:hover {
+    background: linear-gradient(135deg, #059669, #047857) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* Botón CSV */
+.buttons-csv,
+.dt-buttons .buttons-csv {
+    background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+    color: white !important;
+    border-color: #3b82f6 !important;
+}
+
+.buttons-csv:hover,
+.dt-buttons .buttons-csv:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Botón PDF */
+.buttons-pdf,
+.dt-buttons .buttons-pdf {
+    background: linear-gradient(135deg, var(--admin-danger), var(--admin-primary-dark)) !important;
+    color: white !important;
+    border-color: var(--admin-danger) !important;
+    box-shadow: 0 0 15px rgba(255, 0, 64, 0.3) !important;
+}
+
+.buttons-pdf:hover,
+.dt-buttons .buttons-pdf:hover {
+    background: linear-gradient(135deg, var(--admin-primary-dark), var(--admin-danger)) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 64, 0.5) !important;
+}
+
+/* Efectos adicionales para botones de exportación */
+.dt-buttons .btn::before,
+.buttons-copy::before,
+.buttons-excel::before,
+.buttons-csv::before,
+.buttons-pdf::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.dt-buttons .btn:hover::before,
+.buttons-copy:hover::before,
+.buttons-excel:hover::before,
+.buttons-csv:hover::before,
+.buttons-pdf:hover::before {
+    left: 100%;
+}
+
+/* Iconos en botones de exportación */
+.dt-buttons .btn i,
+.buttons-copy i,
+.buttons-excel i,
+.buttons-csv i,
+.buttons-pdf i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+/* Contenedor de botones de exportación */
+.dt-buttons {
+    margin-bottom: 15px !important;
+}
+
+.dt-buttons .dt-button {
+    margin: 0 4px !important;
+}
+
+/* Responsive para botones de exportación */
+@media (max-width: 768px) {
+    .dt-buttons .btn,
+    .buttons-copy,
+    .buttons-excel,
+    .buttons-csv,
+    .buttons-pdf {
+        padding: 8px 12px !important;
+        font-size: 0.9rem !important;
+        margin: 0 2px !important;
+    }
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--admin-primary), var(--admin-primary-dark)) !important;
+    border-color: var(--admin-primary) !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(255, 0, 64, 0.3) !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--admin-primary-dark), var(--admin-primary)) !important;
+    border-color: var(--admin-primary-dark) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 0, 64, 0.4) !important;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--admin-accent), #00cc6a) !important;
+    border-color: var(--admin-accent) !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3) !important;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #00cc6a, var(--admin-accent)) !important;
+    border-color: #00cc6a !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4) !important;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, var(--admin-info), var(--admin-secondary-dark)) !important;
+    border-color: var(--admin-info) !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3) !important;
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, var(--admin-secondary-dark), var(--admin-info)) !important;
+    border-color: var(--admin-secondary-dark) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4) !important;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, var(--admin-warning), #e69500) !important;
+    border-color: var(--admin-warning) !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.3) !important;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #e69500, var(--admin-warning)) !important;
+    border-color: #e69500 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 170, 0, 0.4) !important;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, var(--admin-danger), var(--admin-primary-dark)) !important;
+    border-color: var(--admin-danger) !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(255, 0, 64, 0.3) !important;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, var(--admin-primary-dark), var(--admin-danger)) !important;
+    border-color: var(--admin-primary-dark) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 0, 64, 0.4) !important;
+}
+
+/* Tablas limpias */
+.table {
+    background: var(--admin-gray) !important;
+    color: var(--admin-text-secondary) !important;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: var(--admin-light-gray) !important;
+    color: var(--admin-text) !important;
+}
+
+.table thead th {
+    border-bottom: 1px solid var(--admin-border) !important;
+    font-weight: 600 !important;
+    padding: 18px 20px !important;
+    color: var(--admin-text) !important;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--admin-border) !important;
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background: var(--admin-light-gray) !important;
+}
+
+.table tbody td {
+    padding: 15px 20px !important;
+    color: var(--admin-text) !important;
+    background: var(--admin-gray) !important;
+    border-bottom: 1px solid var(--admin-border) !important;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Filas de tabla alternadas para mejor legibilidad */
+.table tbody tr:nth-child(even) td {
+    background: var(--admin-light-gray) !important;
+}
+
+.table tbody tr:hover td {
+    background: var(--admin-lighter-gray) !important;
+}
+
+/* Enlaces en tablas */
+.table tbody td a {
+    color: var(--admin-primary) !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.table tbody td a:hover {
+    color: var(--admin-secondary) !important;
+    text-decoration: underline;
+}
+
+/* DataTables limpio */
+.dataTables_wrapper {
+    color: var(--admin-text-secondary) !important;
+}
+
+.dataTables_filter input {
+    background: var(--admin-light-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+    border-radius: 6px !important;
+    padding: 12px 18px !important;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.dataTables_filter input:focus {
+    border-color: var(--admin-primary) !important;
+    box-shadow: 0 0 8px rgba(30, 58, 138, 0.2) !important;
+    outline: none;
+}
+
+.dataTables_length select {
+    background: var(--admin-light-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+    border-radius: 6px !important;
+    padding: 10px 15px !important;
+    font-size: 1.2rem;
+}
+
+/* Campos de entrada adicionales */
+input[type="search"],
+input[type="text"],
+select {
+    background: var(--admin-light-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+    border-radius: 6px !important;
+    padding: 10px 15px !important;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+input[type="search"]:focus,
+input[type="text"]:focus,
+select:focus {
+    border-color: var(--admin-primary) !important;
+    box-shadow: 0 0 8px rgba(30, 58, 138, 0.2) !important;
+    outline: none;
+}
+
+/* Dropdown y select elementos */
+select option {
+    background: var(--admin-light-gray) !important;
+    color: var(--admin-text) !important;
+    padding: 8px 12px !important;
+}
+
+.dataTables_info {
+    color: var(--admin-text-secondary) !important;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.paginate_button {
+    background: var(--admin-light-gray) !important;
+    color: var(--admin-text) !important;
+    border-radius: 4px !important;
+    margin: 0 2px !important;
+    border: 1px solid var(--admin-border) !important;
+    transition: all 0.3s ease !important;
+    padding: 10px 15px !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.paginate_button:hover {
+    background: var(--admin-primary) !important;
+    color: white !important;
+    border-color: var(--admin-primary) !important;
+}
+
+.paginate_button.current {
+    background: var(--admin-primary) !important;
+    color: white !important;
+    border-color: var(--admin-primary) !important;
+}
+
+/* Botones de paginación adicionales */
+.dataTables_paginate .paginate_button {
+    background: var(--admin-light-gray) !important;
+    color: var(--admin-text) !important;
+    border: 1px solid var(--admin-border) !important;
+    border-radius: 4px !important;
+    margin: 0 2px !important;
+    padding: 6px 10px !important;
+    transition: all 0.3s ease !important;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background: var(--admin-primary) !important;
+    color: white !important;
+    border-color: var(--admin-primary) !important;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background: var(--admin-primary) !important;
+    color: white !important;
+    border-color: var(--admin-primary) !important;
+}
+
+/* Forms limpios */
+.form-control {
+    background: var(--admin-light-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+    padding: 12px 18px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.form-control:focus {
+    background: var(--admin-lighter-gray) !important;
+    border-color: var(--admin-primary) !important;
+    box-shadow: 0 0 8px rgba(30, 58, 138, 0.2) !important;
+    color: var(--admin-text) !important;
+}
+
+.form-control::placeholder {
+    color: var(--admin-text-secondary);
+    opacity: 0.7;
+}
+
+.form-group label {
+    color: var(--admin-text) !important;
+    font-weight: 600 !important;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Dropdown menu limpio */
+.dropdown-menu {
+    background: var(--admin-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.user-header {
+    background: var(--admin-primary) !important;
+    color: white !important;
+}
+
+.user-footer {
+    background: var(--admin-light-gray) !important;
+}
+
+/* Labels y badges limpios */
+.label {
+    border-radius: 4px !important;
+    padding: 6px 12px !important;
+    font-weight: 500 !important;
+    font-size: 1rem;
+}
+
+.label.bg-red {
+    background: var(--admin-danger) !important;
+}
+
+.label.bg-yellow {
+    background: var(--admin-warning) !important;
+}
+
+.label.bg-green {
+    background: var(--admin-accent) !important;
+}
+
+/* Scrollbar limpio */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--admin-light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--admin-primary);
+    border-radius: 4px;
+    border: 1px solid var(--admin-light-gray);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--admin-primary-dark);
+}
+
+/* Gráficos - Canvas */
+canvas {
+    background: var(--admin-gray) !important;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+/* Box primary gaming */
+.box-primary {
+    border-top-color: var(--admin-primary) !important;
+    border-top-width: 2px !important;
+}
+
+.box-primary > .box-header {
+    background: linear-gradient(135deg, var(--admin-primary), var(--admin-primary-dark)) !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(255, 0, 64, 0.15) !important;
+}
+
+/* Animaciones suaves */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box, .small-box {
+    animation: fadeInUp 0.4s ease;
+}
+
+.box:nth-child(1) { animation-delay: 0.05s; }
+.box:nth-child(2) { animation-delay: 0.1s; }
+.box:nth-child(3) { animation-delay: 0.15s; }
+.box:nth-child(4) { animation-delay: 0.2s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 15px !important;
+    }
+    
+    .box-header {
+        padding: 10px 15px !important;
+    }
+    
+    .box-title {
+        font-size: 1rem !important;
+    }
+    
+    .small-box .inner h4 {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Footer limpio */
+.main-footer {
+    background: var(--admin-darker) !important;
+    border-top: 2px solid var(--admin-primary) !important;
+    color: var(--admin-text-secondary) !important;
+}
+
+/* Iconos suaves */
+.fa, .glyphicon, .ion {
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+}
+
+.sidebar-menu li:hover .fa,
+.sidebar-menu li:hover .glyphicon {
+    transform: scale(1.1);
+    color: var(--admin-primary) !important;
+}
+
+/* Iconos del sidebar más grandes */
+.sidebar-menu > li > a > .fa,
+.sidebar-menu > li > a > .glyphicon,
+.sidebar-menu > li > a > .ion {
+    width: 20px;
+    margin-right: 12px;
+    font-size: 1.3em;
+}
+
+/* Sub-menú iconos */
+.treeview-menu > li > a > .fa,
+.treeview-menu > li > a > .glyphicon,
+.treeview-menu > li > a > .ion {
+    width: 16px;
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+/* Select limpio */
+select.form-control {
+    cursor: pointer;
+}
+
+select.form-control option {
+    background: var(--admin-light-gray);
+    color: var(--admin-text);
+    padding: 8px;
+}
+
+/* Navbar toggle limpio */
+.sidebar-toggle {
+    color: var(--admin-text) !important;
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: var(--admin-primary) !important;
+}
+
+/* Panel body limpio */
+.panel-body {
+    background: var(--admin-gray) !important;
+    color: var(--admin-text-secondary);
+}
+
+/* Forzar tema claro en elementos específicos */
+body, html {
+    background: var(--admin-dark) !important;
+}
+
+/* Elementos de formulario que podrían ser blancos */
+input, select, textarea, button {
+    background: var(--admin-light-gray) !important;
+    color: var(--admin-text) !important;
+    border: 1px solid var(--admin-border) !important;
+}
+
+/* Contenedores que podrían tener fondo blanco */
+.container, .container-fluid, .row, .col {
+    background: transparent !important;
+}
+
+/* Elementos de tabla que podrían ser blancos */
+table, thead, tbody, tr, th, td {
+    background: var(--admin-gray) !important;
+    color: var(--admin-text) !important;
+}
+
+/* Elementos de lista */
+ul, ol, li {
+    background: transparent !important;
+    color: var(--admin-text) !important;
+}
+
+/* Elementos de texto con mejor tamaño */
+p, span, div {
+    color: var(--admin-text) !important;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--admin-text) !important;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.8rem; }
+h5 { font-size: 1.6rem; }
+h6 { font-size: 1.4rem; }
+
+/* Override específico para AdminLTE */
+.skin-blue-light .wrapper,
+.skin-blue-light .content-wrapper,
+.skin-blue-light .main-content,
+.skin-blue-light .content {
+    background: var(--admin-dark) !important;
+    color: var(--admin-text) !important;
+}
+
+/* Forzar header blanco */
+.skin-blue-light .main-header .navbar {
+    background-color: var(--admin-darker) !important;
+}
+
+.skin-blue-light .main-header .navbar .nav > li > a {
+    color: var(--admin-text) !important;
+}
+
+.skin-blue-light .main-header .navbar .sidebar-toggle {
+    color: var(--admin-text) !important;
+}
+
+/* Forzar navbar toggle color */
+.navbar-toggle {
+    color: var(--admin-text) !important;
+}
+
+/* Forzar textos en elementos específicos */
+.box-title,
+.content-header > h1,
+.content-header h1 {
+    color: var(--admin-text) !important;
+}
+
+/* Asegurar que todos los elementos tengan el fondo correcto */
+.content-wrapper,
+.right-side,
+.main-footer {
+    background: var(--admin-dark) !important;
+}
+
+/* DataTables específico */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+    color: var(--admin-text) !important;
+}
+
+.dataTables_wrapper .dataTables_length label,
+.dataTables_wrapper .dataTables_filter label {
+    color: var(--admin-text) !important;
+}
+
+/* Modales y elementos overlay */
+.modal-content {
+    background: var(--admin-gray) !important;
+    color: var(--admin-text) !important;
+}
+
+.modal-header {
+    background: var(--admin-light-gray) !important;
+    color: var(--admin-text) !important;
+    border-bottom: 1px solid var(--admin-border) !important;
+}
+
+.modal-body {
+    background: var(--admin-gray) !important;
+    color: var(--admin-text) !important;
+}
+
+.modal-footer {
+    background: var(--admin-light-gray) !important;
+    border-top: 1px solid var(--admin-border) !important;
+}
+
+/* Alertas y notificaciones */
+.alert {
+    border-radius: 6px !important;
+}
+
+.alert-success {
+    background: #d4edda !important;
+    border-color: #c3e6cb !important;
+    color: #155724 !important;
+}
+
+.alert-info {
+    background: #d1ecf1 !important;
+    border-color: #bee5eb !important;
+    color: #0c5460 !important;
+}
+
+.alert-warning {
+    background: #fff3cd !important;
+    border-color: #ffeeba !important;
+    color: #856404 !important;
+}
+
+.alert-danger {
+    background: #f8d7da !important;
+    border-color: #f5c6cb !important;
+    color: #721c24 !important;
+}
+
+/* Paneles adicionales */
+.panel {
+    background: var(--admin-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+}
+
+.panel-heading {
+    background: var(--admin-light-gray) !important;
+    color: var(--admin-text) !important;
+    border-bottom: 1px solid var(--admin-border) !important;
+}
+
+.panel-body {
+    background: var(--admin-gray) !important;
+    color: var(--admin-text) !important;
+}
+
+/* Bootstrap Select */
+.bootstrap-select .btn {
+    background: var(--admin-light-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+}
+
+.bootstrap-select .dropdown-menu {
+    background: var(--admin-gray) !important;
+}
+
+.bootstrap-select .dropdown-menu li a {
+    color: var(--admin-text) !important;
+}
+
+.bootstrap-select .dropdown-menu li a:hover {
+    background: var(--admin-light-gray) !important;
+}
+
+/* Badges y labels claros */
+.badge {
+    font-weight: 500;
+}
+
+/* Well y elementos de contenedor */
+.well {
+    background: var(--admin-light-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+}
+
+/* Nav tabs */
+.nav-tabs {
+    border-bottom: 1px solid var(--admin-border) !important;
+}
+
+.nav-tabs > li > a {
+    color: var(--admin-text) !important;
+    background: var(--admin-light-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background: var(--admin-gray) !important;
+    color: var(--admin-text) !important;
+    border-bottom-color: var(--admin-gray) !important;
+}
+
+/* Textarea */
+textarea.form-control {
+    background: var(--admin-light-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+}
+
+/* Checkbox y radio */
+.checkbox label,
+.radio label {
+    color: var(--admin-text) !important;
+}
+
+/* Lista de grupos */
+.list-group-item {
+    background: var(--admin-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+}
+
+.list-group-item:hover {
+    background: var(--admin-light-gray) !important;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+    background: var(--admin-light-gray) !important;
+    color: var(--admin-text) !important;
+}
+
+.breadcrumb > li + li:before {
+    color: var(--admin-text-secondary) !important;
+}
+
+/* Progress bars */
+.progress {
+    background: var(--admin-light-gray) !important;
+}
+
+/* Pagination adicional */
+.pagination > li > a,
+.pagination > li > span {
+    background: var(--admin-gray) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+}
+
+.pagination > li > a:hover {
+    background: var(--admin-light-gray) !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span {
+    background: var(--admin-primary) !important;
+    border-color: var(--admin-primary) !important;
+    color: white !important;
+}
+

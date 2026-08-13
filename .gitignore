@@ -1,0 +1,19 @@
+# Archivos locales de configuración
+/config/global.php/config/global-local.php/.env
+.env
+*.log
+
+# Uploads y archivos generados
+/files/
+public/uploads/
+tmp/
+cache/
+
+# Dependencias y editor
+.DS_Store
+.vscode/
+.idea/
+
+# Database dumps
+/db/*.sql
+/db/*.sql.gz
